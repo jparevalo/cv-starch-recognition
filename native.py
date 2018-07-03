@@ -504,7 +504,7 @@ if __name__ == '__main__':
     global root
 
     root = Tk()
-    root.title("Reconocimiento Muestra Pre-Procesamiento")
+    root.title("Reconocimiento Muestra Nativa")
 
     min_distance_var = DoubleVar()
     min_distance_between_circles_slider = Scale( root, length=200, from_=1, to=150, label="Distancia entre Centros (px):", variable = min_distance_var, orient="horizontal", command= lambda x: reprocess_image())
@@ -526,7 +526,7 @@ if __name__ == '__main__':
 
     canvas = Canvas(root, width=resize_x, height=resize_y)
     #canvas.pack(expand=YES, fill=BOTH)
-    temp_img = ImageTk.PhotoImage(file='hist.png')
+    temp_img = ImageTk.PhotoImage(file='placeholder.png')
     image_on_canvas = canvas.create_image(0, 0, image=temp_img, anchor=NW)
     canvas.bind("<ButtonPress-1>", button_clicked)
     canvas.bind("<B1-Motion>", on_drag)

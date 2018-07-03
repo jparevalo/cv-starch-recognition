@@ -559,7 +559,7 @@ if __name__ == '__main__':
 
     canvas = Canvas(root, width=resize_x, height=resize_y)
     #canvas.pack(expand=YES, fill=BOTH)
-    temp_img = ImageTk.PhotoImage(file='hist.png')
+    temp_img = ImageTk.PhotoImage(file='placeholder.png')
     image_on_canvas = canvas.create_image(0, 0, image=temp_img, anchor=NW)
     canvas.bind("<ButtonPress-1>", button_clicked)
     canvas.bind("<B1-Motion>", on_drag)
@@ -576,6 +576,6 @@ if __name__ == '__main__':
 
     photo_btn = Button(root, text="Seleccionar imagen", command= lambda : select_image(), width = 80)
     photo_btn.pack(side="bottom", fill="both", expand="yes", padx="10", pady="10")
-    next_btn = Button(root, text="Siguiente", command= lambda : save_found_circles_data(found_circles, root))
+    next_btn = Button(root, text="Finalizar", command= lambda : save_found_circles_data(found_circles, root))
 
     root.mainloop()
